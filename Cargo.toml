@@ -1,0 +1,16 @@
+[package]
+name = "grpc_etcd"
+version = "0.1.0"
+authors = ["angelrain1 <lagudomeze@163.com>"]
+
+[dependencies]
+protobuf        = "1.*"
+tls-api         = "0.*"
+futures         = "0.1.*"
+futures-cpupool = "0.1.*"
+
+[dependencies.grpc]
+version = "0.1.11"
+
+[build-dependencies.protoc-rust-grpc]
+version = "0.1"
