@@ -2,6 +2,8 @@
 name = "grpc_etcd"
 version = "0.1.0"
 authors = ["angelrain1 <lagudomeze@163.com>"]
+license = "MIT/Apache-2.0"
+description = "etcd rust-grpc api"
 
 [dependencies]
 protobuf        = "1.*"
