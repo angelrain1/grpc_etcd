@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `KVClient` struct in crate `grpc_etcd`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, KVClient">
+
+    <title>grpc_etcd::rpc_grpc::KVClient - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct KVClient</p><div class="block items"><ul><li><a href="#methods">Methods</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='../index.html'>grpc_etcd</a>::<wbr><a href='index.html'>rpc_grpc</a></p><script>window.sidebarCurrent = {name: 'KVClient', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>grpc_etcd</a>::<wbr><a href='index.html'>rpc_grpc</a>::<wbr><a class="struct" href=''>KVClient</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/grpc_etcd/rpc_grpc.rs.html#38-45' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct KVClient { /* fields omitted */ }</pre><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class="struct" href="../../grpc_etcd/rpc_grpc/struct.KVClient.html" title="struct grpc_etcd::rpc_grpc::KVClient">KVClient</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/grpc_etcd/rpc_grpc.rs.html#47-94' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.with_client' class="method"><span id='with_client.v' class='invisible'><code>fn <a href='#method.with_client' class='fnname'>with_client</a>(grpc_client: Client) -&gt; Self</code></span></h4>
+<h4 id='method.new_plain' class="method"><span id='new_plain.v' class='invisible'><code>fn <a href='#method.new_plain' class='fnname'>new_plain</a>(host: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, port: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u16.html">u16</a>, conf: ClientConf) -&gt; Result&lt;Self&gt;</code></span></h4>
+<h4 id='method.new_tls' class="method"><span id='new_tls.v' class='invisible'><code>fn <a href='#method.new_tls' class='fnname'>new_tls</a>&lt;C:&nbsp;TlsConnector&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;host: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;port: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u16.html">u16</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;conf: ClientConf<br>) -&gt; Result&lt;Self&gt;</code></span></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="../../grpc_etcd/rpc_grpc/trait.KV.html" title="trait grpc_etcd::rpc_grpc::KV">KV</a> for <a class="struct" href="../../grpc_etcd/rpc_grpc/struct.KVClient.html" title="struct grpc_etcd::rpc_grpc::KVClient">KVClient</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/grpc_etcd/rpc_grpc.rs.html#96-116' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.range' class="method"><span id='range.v' class='invisible'><code>fn <a href='../../grpc_etcd/rpc_grpc/trait.KV.html#tymethod.range' class='fnname'>range</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;o: RequestOptions, <br>&nbsp;&nbsp;&nbsp;&nbsp;p: <a class="struct" href="../../grpc_etcd/rpc/struct.RangeRequest.html" title="struct grpc_etcd::rpc::RangeRequest">RangeRequest</a><br>) -&gt; SingleResponse&lt;<a class="struct" href="../../grpc_etcd/rpc/struct.RangeResponse.html" title="struct grpc_etcd::rpc::RangeResponse">RangeResponse</a>&gt;</code></span></h4>
+<h4 id='method.put' class="method"><span id='put.v' class='invisible'><code>fn <a href='../../grpc_etcd/rpc_grpc/trait.KV.html#tymethod.put' class='fnname'>put</a>(&amp;self, o: RequestOptions, p: <a class="struct" href="../../grpc_etcd/rpc/struct.PutRequest.html" title="struct grpc_etcd::rpc::PutRequest">PutRequest</a>) -&gt; SingleResponse&lt;<a class="struct" href="../../grpc_etcd/rpc/struct.PutResponse.html" title="struct grpc_etcd::rpc::PutResponse">PutResponse</a>&gt;</code></span></h4>
+<h4 id='method.delete_range' class="method"><span id='delete_range.v' class='invisible'><code>fn <a href='../../grpc_etcd/rpc_grpc/trait.KV.html#tymethod.delete_range' class='fnname'>delete_range</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;o: RequestOptions, <br>&nbsp;&nbsp;&nbsp;&nbsp;p: <a class="struct" href="../../grpc_etcd/rpc/struct.DeleteRangeRequest.html" title="struct grpc_etcd::rpc::DeleteRangeRequest">DeleteRangeRequest</a><br>) -&gt; SingleResponse&lt;<a class="struct" href="../../grpc_etcd/rpc/struct.DeleteRangeResponse.html" title="struct grpc_etcd::rpc::DeleteRangeResponse">DeleteRangeResponse</a>&gt;</code></span></h4>
+<h4 id='method.txn' class="method"><span id='txn.v' class='invisible'><code>fn <a href='../../grpc_etcd/rpc_grpc/trait.KV.html#tymethod.txn' class='fnname'>txn</a>(&amp;self, o: RequestOptions, p: <a class="struct" href="../../grpc_etcd/rpc/struct.TxnRequest.html" title="struct grpc_etcd::rpc::TxnRequest">TxnRequest</a>) -&gt; SingleResponse&lt;<a class="struct" href="../../grpc_etcd/rpc/struct.TxnResponse.html" title="struct grpc_etcd::rpc::TxnResponse">TxnResponse</a>&gt;</code></span></h4>
+<h4 id='method.compact' class="method"><span id='compact.v' class='invisible'><code>fn <a href='../../grpc_etcd/rpc_grpc/trait.KV.html#tymethod.compact' class='fnname'>compact</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;o: RequestOptions, <br>&nbsp;&nbsp;&nbsp;&nbsp;p: <a class="struct" href="../../grpc_etcd/rpc/struct.CompactionRequest.html" title="struct grpc_etcd::rpc::CompactionRequest">CompactionRequest</a><br>) -&gt; SingleResponse&lt;<a class="struct" href="../../grpc_etcd/rpc/struct.CompactionResponse.html" title="struct grpc_etcd::rpc::CompactionResponse">CompactionResponse</a>&gt;</code></span></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "grpc_etcd";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

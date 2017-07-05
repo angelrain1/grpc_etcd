@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `LeaseClient` struct in crate `grpc_etcd`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, LeaseClient">
+
+    <title>grpc_etcd::rpc_grpc::LeaseClient - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct LeaseClient</p><div class="block items"><ul><li><a href="#methods">Methods</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='../index.html'>grpc_etcd</a>::<wbr><a href='index.html'>rpc_grpc</a></p><script>window.sidebarCurrent = {name: 'LeaseClient', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>grpc_etcd</a>::<wbr><a href='index.html'>rpc_grpc</a>::<wbr><a class="struct" href=''>LeaseClient</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/grpc_etcd/rpc_grpc.rs.html#324-330' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct LeaseClient { /* fields omitted */ }</pre><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class="struct" href="../../grpc_etcd/rpc_grpc/struct.LeaseClient.html" title="struct grpc_etcd::rpc_grpc::LeaseClient">LeaseClient</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/grpc_etcd/rpc_grpc.rs.html#332-373' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.with_client' class="method"><span id='with_client.v' class='invisible'><code>fn <a href='#method.with_client' class='fnname'>with_client</a>(grpc_client: Client) -&gt; Self</code></span></h4>
+<h4 id='method.new_plain' class="method"><span id='new_plain.v' class='invisible'><code>fn <a href='#method.new_plain' class='fnname'>new_plain</a>(host: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, port: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u16.html">u16</a>, conf: ClientConf) -&gt; Result&lt;Self&gt;</code></span></h4>
+<h4 id='method.new_tls' class="method"><span id='new_tls.v' class='invisible'><code>fn <a href='#method.new_tls' class='fnname'>new_tls</a>&lt;C:&nbsp;TlsConnector&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;host: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;port: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u16.html">u16</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;conf: ClientConf<br>) -&gt; Result&lt;Self&gt;</code></span></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="../../grpc_etcd/rpc_grpc/trait.Lease.html" title="trait grpc_etcd::rpc_grpc::Lease">Lease</a> for <a class="struct" href="../../grpc_etcd/rpc_grpc/struct.LeaseClient.html" title="struct grpc_etcd::rpc_grpc::LeaseClient">LeaseClient</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/grpc_etcd/rpc_grpc.rs.html#375-391' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.lease_grant' class="method"><span id='lease_grant.v' class='invisible'><code>fn <a href='../../grpc_etcd/rpc_grpc/trait.Lease.html#tymethod.lease_grant' class='fnname'>lease_grant</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;o: RequestOptions, <br>&nbsp;&nbsp;&nbsp;&nbsp;p: <a class="struct" href="../../grpc_etcd/rpc/struct.LeaseGrantRequest.html" title="struct grpc_etcd::rpc::LeaseGrantRequest">LeaseGrantRequest</a><br>) -&gt; SingleResponse&lt;<a class="struct" href="../../grpc_etcd/rpc/struct.LeaseGrantResponse.html" title="struct grpc_etcd::rpc::LeaseGrantResponse">LeaseGrantResponse</a>&gt;</code></span></h4>
+<h4 id='method.lease_revoke' class="method"><span id='lease_revoke.v' class='invisible'><code>fn <a href='../../grpc_etcd/rpc_grpc/trait.Lease.html#tymethod.lease_revoke' class='fnname'>lease_revoke</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;o: RequestOptions, <br>&nbsp;&nbsp;&nbsp;&nbsp;p: <a class="struct" href="../../grpc_etcd/rpc/struct.LeaseRevokeRequest.html" title="struct grpc_etcd::rpc::LeaseRevokeRequest">LeaseRevokeRequest</a><br>) -&gt; SingleResponse&lt;<a class="struct" href="../../grpc_etcd/rpc/struct.LeaseRevokeResponse.html" title="struct grpc_etcd::rpc::LeaseRevokeResponse">LeaseRevokeResponse</a>&gt;</code></span></h4>
+<h4 id='method.lease_keep_alive' class="method"><span id='lease_keep_alive.v' class='invisible'><code>fn <a href='../../grpc_etcd/rpc_grpc/trait.Lease.html#tymethod.lease_keep_alive' class='fnname'>lease_keep_alive</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;o: RequestOptions, <br>&nbsp;&nbsp;&nbsp;&nbsp;p: StreamingRequest&lt;<a class="struct" href="../../grpc_etcd/rpc/struct.LeaseKeepAliveRequest.html" title="struct grpc_etcd::rpc::LeaseKeepAliveRequest">LeaseKeepAliveRequest</a>&gt;<br>) -&gt; StreamingResponse&lt;<a class="struct" href="../../grpc_etcd/rpc/struct.LeaseKeepAliveResponse.html" title="struct grpc_etcd::rpc::LeaseKeepAliveResponse">LeaseKeepAliveResponse</a>&gt;</code></span></h4>
+<h4 id='method.lease_time_to_live' class="method"><span id='lease_time_to_live.v' class='invisible'><code>fn <a href='../../grpc_etcd/rpc_grpc/trait.Lease.html#tymethod.lease_time_to_live' class='fnname'>lease_time_to_live</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;o: RequestOptions, <br>&nbsp;&nbsp;&nbsp;&nbsp;p: <a class="struct" href="../../grpc_etcd/rpc/struct.LeaseTimeToLiveRequest.html" title="struct grpc_etcd::rpc::LeaseTimeToLiveRequest">LeaseTimeToLiveRequest</a><br>) -&gt; SingleResponse&lt;<a class="struct" href="../../grpc_etcd/rpc/struct.LeaseTimeToLiveResponse.html" title="struct grpc_etcd::rpc::LeaseTimeToLiveResponse">LeaseTimeToLiveResponse</a>&gt;</code></span></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "grpc_etcd";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>
