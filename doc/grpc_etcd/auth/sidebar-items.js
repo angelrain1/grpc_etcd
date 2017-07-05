@@ -1,1 +1,0 @@
-initSidebarItems({"enum":[["Permission_Type",""]],"fn":[["file_descriptor_proto",""]],"struct":[["Permission",""],["Role",""],["User",""]]});
